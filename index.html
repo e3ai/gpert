@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="Geometric-Photometric Event-based 3D Gaussian Ray Tracing">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Geometric-Photometric Event-based 3D Gaussian Ray Tracing</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" href="./static/images/favicon.svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">Geometric-Photometric Event-based 3D Gaussian Ray Tracing</h1>
+              <div class="is-size-1 my-publication-venue">CVPR 2026</div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                <a href="">Kai Kohyama</a><sup>1</sup>,</span>
+                <span class="author-block">
+                <a href="https://aoki-medialab.jp">Yoshimitsu Aoki</a><sup>1</sup>,</span>
+                <span class="author-block">
+                <a href="https://sites.google.com/view/guillermogallego">Guillermo Gallego</a><sup>2</sup>,</span>
+                <span class="author-block">
+                <a href="http://shibashintaro.com">Shintaro Shiba</a><sup>1</sup>,</span>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup>1</sup>Keio University</span>
+                <span class="author-block"><sup>2</sup>Technische Universität Berlin</span>
+              </div>
+              <div class="column has-text-centered">
+                <div class="publication-links">
+
+                  <!-- PDF Link. -->
+                  <!--
+                  <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2312.03799.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                  <span>Paper</span>
+                  </a>
+                  </span>
+                  -->
+                  <span class="link-block">
+                  <a href="https://arxiv.org/abs/2512.18640" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                  <span>arXiv</span>
+                  </a>
+                  </span>
+
+                  <!-- Video Link. TODO -->
+                  <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                  <span>Video (Coming soon)</span>
+                  </a>
+                  </span>
+                  
+                  <!-- Code Link. -->
+                  
+                  <span class="link-block">
+                  <a href="https://github.com/e3ai/gpert" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                  <span>Code (Coming soon)</span>
+                  </a>
+                  </span>
+                
+                  <!-- Dataset Link. -->
+                  <!-- <span class="link-block">
+                  <a href="https://drive.google.com/drive/folders/1VoKEg6CSITmPH27R19tGzyzbUIrmhRDV?usp=sharing" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                  <span>Data</span>
+                  </a> -->
+                  <!-- </span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+              <img src="./static/images/teaser_gif_long_highres.gif" style="width: 100%; height: auto;">
+          </div>
+        </div>
+        <!-- Teaser image. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+              <img src="./static/images/method_overview.png">
+          </div>
+        </div> <!--/ Teaser image. -->
+
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Event cameras offer a high temporal resolution over traditional frame-based cameras, which makes them suitable for motion and structure estimation. However, it has been unclear how event-based 3D Gaussian Splatting (3DGS) approaches could leverage fine-grained temporal information of sparse events. This work proposes a framework to address the trade-off between accuracy and temporal resolution in event-based 3DGS. Our key idea is to decouple the rendering into two branches: event-by-event geometry (depth) rendering and snapshot-based radiance (intensity) rendering, by using ray-tracing and the image of warped events. The extensive evaluation shows that our method achieves state-of-the-art performance on the real-world datasets and competitive performance on the synthetic dataset. Also, the proposed method works without prior information (e.g., pretrained image reconstruction models) or COLMAP-based initialization, is more flexible in the event selection number, and achieves sharp reconstruction on scene edges with fast training time. We hope that this work deepens our understanding of the sparse nature of events for 3D reconstruction.
+            </div>
+          </div>
+        </div> <!--/ Abstract. -->
+
+         <!-- Paper video. -->
+         <!-- <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Video</h2>
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/o79wbZh0gU4?si=ua1CfydQxP3AAPty" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div> / Paper video. -->
+
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <a class="icon-link" href="https://arxiv.org/abs/2512.18640">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <!-- <a class="icon-link" href="https://github.com">
+            <i class="fab fa-github"></i>
+          </a> -->
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                  Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+              <p>
+                We thank the authors of <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> that kindly
+                open sourced the template of this website.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
