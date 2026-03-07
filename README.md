@@ -4,4 +4,6 @@
 
 This repository contains the official implementation of ["Geometric-Photometric Event-based 3D Gaussian Ray Tracing"](https://arxiv.org/abs/2512.18640).
 
+<img src="./assets/teaser_gif_long_fixed.gif" width="80%" height="auto" alt="Thumbnail"/>
+
 The code will be released soon.
