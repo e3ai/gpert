@@ -12,5 +12,5 @@ The code will be released soon.
 
 # Author
 
-- Kohyama Kai [@FlorPeng](https://github.com/FlorPeng)
+- Kai Kohyama [@FlorPeng](https://github.com/FlorPeng)
 - Shintaro Shiba [@shiba24](https://github.com/shiba24)
