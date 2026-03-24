@@ -8,3 +8,9 @@ by Kai Kohyama, Yoshimitsu Aoki, Guillermo Gallego, and Shintaro Shiba.
 <img src="./assets/teaser_gif_long_fixed.gif" width="80%" height="auto" alt="Thumbnail"/>
 
 The code will be released soon.
+
+
+# Author
+
+- Kohyama Kai [@FlorPeng](https://github.com/FlorPeng)
+- Shintaro Shiba [@shiba24](https://github.com/shiba24)
