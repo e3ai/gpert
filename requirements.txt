@@ -1,0 +1,26 @@
+dataclasses-json
+easydict
+einops
+fused-ssim @ git+https://github.com/rahul-goel/fused-ssim/@a7c48d6dd7ac6dc39a7958c7c4452e0b10418f38
+h5py
+hdf5plugin
+hydra-core
+imageio
+joblib
+lpips
+matplotlib
+omegaconf
+opencv-python
+plotly
+plyfile
+pyyaml
+scikit-learn
+scipy
+setuptools
+tensorboard
+tensorboard-data-server
+tqdm
+usd-core
+torchmetrics==0.6.2
+rich
+msgpack
