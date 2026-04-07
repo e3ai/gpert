@@ -1,0 +1,110 @@
+# Path
+data_root: /home/ubuntu/slocal/data/tum-vie/release/mocap-desk2-preprocessed
+outdir: /home/ubuntu/slocal/data/gpert_output/tumvie
+grut_cfg_path: ./cfg/grut_config/configs
+gsinit_ckpt_path: ""
+
+train: True
+test: True
+
+data_type: robust_e-nerf
+gsinit_method: random  # [random, checkpoint]
+test_h: 1024
+test_w: 1024
+test_dir: val
+test_pose: transforms_val.json
+c: 0.25
+max_steps: 40000
+accumulation_num: 500000
+initial_gaussians: 100000
+use_diff_image_step: 10000
+diff_method: "once"  # [once, twice]
+accumulation_method: "iwe"  # [iwe, event_frame]
+dataloader_method: num # [num, time]
+interp_method: "slerp"  # [lin, slerp]
+log_eps: 0.000001
+log_method: log
+background_color: black  # [black, white, gray]
+xyz_max: 5
+xyz_min: -5
+plot_interval: 500
+
+focus_weight: 0.125
+use_focus: True
+depth_grad: posrot
+multi_iwe: True
+
+l1_weight: 10
+l2_weight: 500
+ssim_weight: 1
+use_ssim: True
+use_l1: False
+use_l2: True
+normalize_l1: True
+normalize_l2: True
+use_masked_l1: True
+use_masked_l2: True
+l1_mask_weight: 0.5
+l2_mask_weight: 0.25
+
+depth_variation_weight: 0
+variation_weight: 0
+
+is_color: False
+bayer_pattern: "RGGB"
+devide_g: False
+bayered_diff: False
+
+img_coeff: 60
+vmin: 0.0
+vmax: 10.0
+
+# GSStrategy configuration
+strategy:
+  method: GSStrategy
+  print_stats: true
+  max_n_gaussians: 1500000
+  
+  densify:
+    params: positions # one of [positions, positions_gradient_norm, features_albedo]
+    frequency: 500 # densification_interval in 3DGS with default value 100
+    start_iteration: 1000 # densify_from_iter in 3DGS default value 500
+    end_iteration: -1 # densify_until_iter in 3DGS default value 15_000
+    clone_grad_threshold: 0.0002 # Called densify_grad_threshold in 3DGS with default value 0.0002
+    split_grad_threshold: 0.0002 # Called densify_grad_threshold in 3DGS with default value 0.0002
+    relative_size_threshold: 0.01 # Gaussians larger than relative_size_threshold * scene_extent will be split not cloned. Called percent_dense in 3DGS with default value 0.01
+    split:
+      n_gaussians: 2 # Hardcoded to 2 in 3DGS
+
+  # They use the same values for pruning and densification so check the above values
+  prune:
+    frequency: 100
+    start_iteration: 1000
+    end_iteration: -1
+    density_threshold: 0.02 # All Gaussians with the density lower than this will be pruned away / default: 0.005
+
+  # Start and end iteration are not used in 3DGS
+  reset_density:
+    frequency: 3000 # Opacity reset interval in 3DGS default value 3000
+    start_iteration: -1
+    end_iteration: 27000
+    # This parameter is hardcoded in the 3DGS to 0.01
+    new_max_density: 0.01 # The density of the all the Gaussians will be set to min(density, this)
+
+  density_decay:
+    gamma: 0.99
+    start_iteration: 500 # 500
+    end_iteration: -1 # 15000
+    frequency: 50
+
+  prune_weight:
+    frequency: 100
+    start_iteration: -1
+    end_iteration: -1
+    weight_threshold: 0.5
+
+  prune_scale:
+    frequency: 100
+    start_iteration: -1
+    end_iteration: -1
+    threshold: 1.0
