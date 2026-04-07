@@ -5,6 +5,18 @@ This repository is the official implementation of [Geometric-Photometric Event-b
 
 <img src="./assets/teaser_gif_short.gif" width="80%" height="auto" alt="Thumbnail"/>
 
+
+If you use this work in your research, please cite it:
+
+```bibtex
+@InProceedings{Kohyama26cvpr,
+  author        = {Kai Kohyama and Yoshimitsu Aoki and Guillermo Gallego and Shintaro Shiba},
+  title         = {Geometric-Photometric Event-based 3D Gaussian Ray Tracing},
+  booktitle     = {Computer Viion and Pattern Recognition (CVPR)},
+  year          = 2026
+}
+```
+
 ## Setup
 ### Tested environments
 - Ubuntu 22.04
@@ -62,3 +74,11 @@ python scripts/run.py --config cfg/robust_e_nerf/chair.yaml
 We appreciate the following repositories for inspiration:
 - [3DGRUT](https://github.com/nv-tlabs/3dgrut)
 - [robust-e-nerf](https://github.com/wengflow/robust-e-nerf?tab=MIT-1-ov-file)
+
+
+-------
+# Additional Resources
+
+* [Secrets of Event-based Optical Flow (ECCV 2022, T-PAMI 2024)](https://github.com/tub-rip/event_based_optical_flow)
+* [event-vision-library](https://github.com/shiba24/event-vision-library)
+
