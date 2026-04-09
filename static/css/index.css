@@ -187,6 +187,6 @@ body {
   margin-top: 15px;
   margin-bottom: 15px;
   font-weight: 500;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   display: block;
 }
