@@ -1,18 +1,22 @@
 # Geometric-Photometric Event-based 3D Gaussian Ray Tracing (CVPR 2026 Highlight)
-| [Webpage](https://e3ai.github.io/gpert/) | [Paper](https://arxiv.org/abs/2512.18640) | Video (Coming soon) |
 
-This repository is the official implementation of [Geometric-Photometric Event-based 3D Gaussian Ray Tracing](https://arxiv.org/abs/2512.18640) by Kai Kohyama, Yoshimitsu Aoki, Guillermo Gallego, and Shintaro Shiba.
+This is the official implementation of [**Geometric-Photometric Event-based 3D Gaussian Ray Tracing**](https://arxiv.org/abs/2512.18640) by [Kai Kohyama](https://www.linkedin.com/in/kai-kohyama-48b48830b), [Yoshimitsu Aoki](https://aoki-medialab.jp/aokiyoshimitsu-en/), [Guillermo Gallego](http://www.guillermogallego.es/), and [Shintaro Shiba](https://shibashintaro.com/).
 
-<img src="./assets/teaser_gif_short.gif" width="80%" height="auto" alt="Thumbnail"/>
+<h2 align="left">
+
+[Webpage](https://e3ai.github.io/gpert/) | [Paper](https://arxiv.org/abs/2512.18640) | [Poster](assets/2026_CVPR_GPERT_poster.png) | [Video](https://youtu.be/5lBhe0a7Il4)
+</h2>
+
+[<img src="assets/teaser_gif_short.gif" width="80%" height="auto" alt="Thumbnail"/>](https://youtu.be/5lBhe0a7Il4)
 
 
-If you use this work in your research, please cite it:
+If you use this work in your research, please cite it as follows:
 
 ```bibtex
 @InProceedings{Kohyama26cvpr,
   author        = {Kai Kohyama and Yoshimitsu Aoki and Guillermo Gallego and Shintaro Shiba},
   title         = {Geometric-Photometric Event-based 3D Gaussian Ray Tracing},
-  booktitle     = {Computer Viion and Pattern Recognition (CVPR)},
+  booktitle     = {{IEEE/CVF} Computer Vision and Pattern Recognition (CVPR)},
   year          = 2026
 }
 ```
@@ -81,4 +85,4 @@ We appreciate the following repositories for inspiration:
 
 * [Secrets of Event-based Optical Flow (ECCV 2022, T-PAMI 2024)](https://github.com/tub-rip/event_based_optical_flow)
 * [event-vision-library](https://github.com/shiba24/event-vision-library)
-
+* [Research page (TU Berlin RIP lab)](https://sites.google.com/view/guillermogallego/research/event-based-vision)
